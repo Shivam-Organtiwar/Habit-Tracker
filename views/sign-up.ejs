@@ -1,0 +1,16 @@
+      <h1>Habit Tracker</h1>
+      <h3 class="signUpButton"> <i class="fas fa-user-plus"></i> Sign Up</h3>
+      <%- include ("./partials/messages") %>
+      <form action="/users/sign-up" method="POST">
+        <div class="form-group">
+          <label for="name" class="labelName">Your Name</label>
+          <input type="name" class="inputName" required name="name" class="form-control" placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>" />
+        </div>
+        <div class="form-group">
+          <label for="email" class="labelEmail">Your Email</label>
+          <input type="email" class="inputEmail" name="email" required class="form-control" placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>" />
+        </div>
+        <button type="submit" class="butonSignUp"> Sign Up </button>
+      </form>

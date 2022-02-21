@@ -1,0 +1,12 @@
+      <h1>Habit Tracker</h1>
+      <h3 class="signInButton"><i class="fas fa-sign-in-alt"></i> Sign In</h3>
+      <%- include ("./partials/messages") %>
+      <form action="/users/sign-in" method="POST">
+        <div class="form-group">
+          <label for="email" class="emailSignIn">Email</label>
+          <input type="email" class="emailSign" name="email" required class="form-control" placeholder="Enter Your Email" />
+        </div>
+        <button type="submit" class="buttonSignIn">Sign In</button>
+      </form>
+     
+    

@@ -1,0 +1,19 @@
+{
+  "name": "demo_habit",
+  "version": "1.0.0",
+  "description": "A Web Application That Tracks Habits On Daily Basis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shivam Organtiwar",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.2.2"
+  }
+}

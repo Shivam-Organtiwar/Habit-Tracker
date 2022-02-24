@@ -9,14 +9,6 @@ const mongoose = require('mongoose');                           //importing the 
 const db = require('./config/mongoose');                        //accquiring the connection to database
 
 
-app.listen(port, function(err){                                 //running the server and checking for errors if any
-    if(err){
-        console.log('Error In Running The Server');             
-        return;
-    }
-    console.log('Cool! Server Is Running On Port:',port);
-});
-
 
 
 app.use(expressLayouts);                                        //using EJS layouts
@@ -28,3 +20,12 @@ app.use(flash());
 app.use(function (req, res, next) { res.locals.success_msg = req.flash('success_msg'); res.locals.error_msg = req.flash('error_msg'); res.locals.error = req.flash('error'); next(); });
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
+
+
+app.listen(port, function(err){                                 //running the server and checking for errors if any
+    if(err){
+        console.log('Error In Running The Server');             
+        return;
+    }
+    console.log('Cool! Server Is Running On Port:',port);
+});

@@ -1,5 +1,5 @@
 const express = require('express');                             //importing express server
-const port = process.env.PORT || 8000;                          //specifying the port on which server will run
+// const port = process.env.PORT || 8000;                          //specifying the port on which server will run
 const app = express();                                          //launching express server
 const ejs = require('ejs');                                     //importing the template engine ejs
 const expressLayouts = require('express-ejs-layouts');          //importing the ejs layouts
@@ -22,10 +22,6 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 
 
-app.listen(port, function(err){                                 //running the server and checking for errors if any
-    if(err){
-        console.log('Error In Running The Server');             
-        return;
-    }
-    console.log('Cool! Server Is Running On Port:',port);
-});
+app.listen(process.env.PORT || 8000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
